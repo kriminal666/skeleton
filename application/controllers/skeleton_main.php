@@ -50,7 +50,7 @@ class skeleton_main extends CI_Controller {
 		       
         //Helpers
         $this->load->helper('url');
-        $this->load->helper('form');
+        
                 
         /* Set language */
 		$current_language=$this->session->userdata("current_language");
@@ -1201,33 +1201,50 @@ public function defaultvalues_view($table_name) {
 
 
 
-public function saludar_profe(){
+public function saludar(){
    //load html header
    $this->_load_html_header($this->_get_html_header_data());
    //load body header
    $this->_load_body_header();
    //load body
-   $form = 1;
    $this->carga_body();
    $this->_load_body_footer();
 }
-public function carga_body(){
+public function carga_body($data=null){
 		  
-		$data=array(
-			"formOpen"=>form_open(base_url().'index.php/skeleton_main/comprueba',array('name'=>'formulario','id'=>'form')),
-			"label1"=>form_label('Nombre','name'),
-			"input1"=>form_input('name'),
-			"label2"=>form_label('Apellido','lastname'),
-			"input2"=>form_input('lastname'),
-			"submit"=>form_submit('send','Saludar'),
-			"formClose"=>form_close());
+	
+			$data['formOpen']=form_open(base_url().'index.php/skeleton_main/comprueba',array('name'=>'formulario','id'=>'form'));
+			$data['label1']=form_label('Nombre','name');
+			$data['input1']=form_input('name');
+			$data['label2']=form_label('Apellido','lastname');
+			$data['input2']=form_input('lastname');
+			$data['submit']=form_submit('send','Saludar');
+			$data['formClose']=form_close();
             $this->load->view('include/body',$data);
        
-        	
+       	
         
 }
 
 //Función que comprueba los datos
-
+	public function comprueba(){
+		  //Se ha pulsado el botón si hemos llegado a esta función.
+		 $data ['button'] = $this->input->get_post('send');
+		//Si existe la variable y los campos no están vacíos
+		if (isset($_POST)&&($_POST['name'] !="")&&($_POST['lastname'] !="")){
+			$data ['name'] = $this->input->get_post('name');
+            $data ['lastname'] = $this->input->get_post('lastname');
+			
+		}else{
+			$data['error']= "<h1>Debes enviar algo</h1>";
+	    }
+	      //load html header
+         $this->_load_html_header($this->_get_html_header_data());
+         //load body header
+         $this->_load_body_header();
+         //load body
+         $this->carga_body($data);
+         $this->_load_body_footer();
+    }
 }
 }

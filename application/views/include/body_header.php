@@ -9,7 +9,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="brand" href="#"> <i class="icon-home"> </i><?php echo $body_header_app_name;?></a>
+    <a class="brand" href="<?php echo base_url();?>"> <i class="icon-home"> </i><?php echo $body_header_app_name;?></a>
   
     <div class="nav-collapse collapse">
      
@@ -48,10 +48,10 @@
           </ul>
       </li>
        <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Apartado Personal <b class="caret"></b></a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Apartado Criminal <b class="caret"></b></a>
           <ul class="dropdown-menu">
         
-            <li><a href='<?=base_url()?>index.php/skeleton_main/saludar_profe')?>Saludar al profe</a></li>
+            <li><a href='<?=base_url()?>index.php/skeleton_main/saludar')?>Saludar</a></li>
           </ul>
 
       </li>
