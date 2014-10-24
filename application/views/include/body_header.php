@@ -47,6 +47,14 @@
             <li><a href="<?=base_url()?>index.php/skeleton_main/change_language/english"><?php echo lang('english');?></a></li>
           </ul>
       </li>
+       <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Apartado Personal <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+        
+            <li><a href='<?=base_url()?>index.php/saludo_inicial/')?>Saludar al profe</a></li>
+          </ul>
+
+      </li>
      </ul>               
    </div>
    <div class="pull-right navbar-text">
