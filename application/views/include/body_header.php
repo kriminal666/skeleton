@@ -51,7 +51,7 @@
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Apartado Personal <b class="caret"></b></a>
           <ul class="dropdown-menu">
         
-            <li><a href='<?=base_url()?>index.php/saludo_inicial/')?>Saludar al profe</a></li>
+            <li><a href='<?=base_url()?>index.php/skeleton_main/saludar_profe')?>Saludar al profe</a></li>
           </ul>
 
       </li>

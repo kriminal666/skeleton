@@ -1,15 +1,17 @@
 <div id="skeleton_body">
-<?php echo "PUT YOUR DEFAULT BODY CONTENT HERE (file: views/include/body.php) or edit function _load_body";?>
-<p><b>Insertar usuario</b></p>
-		
-		
-		<form id="form" action="#" method="POST">
-			<p>Nombre: <input name="name" id="name" type="text"></p>
-			<p>Apellido: <input name="lastname" id="lastname" type="text"></p>
-			<p>Twitter:  <input name="twitter" id="twitter" type="text"></p>
-			<p>Web:   <input name="web" id="twitter" type="text"></p>
-			<input type="submit" value="Guardar Usuario" id="save">
-		</form>
+<?php  if (isset($formOpen)):?>
+<?php echo "<h1>Saludar al usuario</h1>"; ?>
+<?php echo $formOpen;?>
+<?php echo $label1; ?>
+<?php echo $input1; ?>
+<?php echo $label2; ?>
+<?php echo $input2; ?>
+<?php echo $submit; ?>
+<?php echo $formClose ?>
+<?php else: ?>
+<h1>Hay que editar todo el body</h1>
+<?php endif ?>
+
 
 
 

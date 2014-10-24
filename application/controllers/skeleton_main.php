@@ -50,6 +50,7 @@ class skeleton_main extends CI_Controller {
 		       
         //Helpers
         $this->load->helper('url');
+        $this->load->helper('form');
                 
         /* Set language */
 		$current_language=$this->session->userdata("current_language");
@@ -121,8 +122,10 @@ class skeleton_main extends CI_Controller {
 	}
 	
 	protected function _load_body() {
-		$data=array();
-		$this->load->view('include/body',$data);		
+			$data = array();
+			$this->load->view('include/body',$data);
+
+				
 	}
 	
 	public function change_language($language) {
@@ -1196,6 +1199,35 @@ public function defaultvalues_view($table_name) {
 		return $post_array;
 	}
 
+
+
+public function saludar_profe(){
+   //load html header
+   $this->_load_html_header($this->_get_html_header_data());
+   //load body header
+   $this->_load_body_header();
+   //load body
+   $form = 1;
+   $this->carga_body();
+   $this->_load_body_footer();
+}
+public function carga_body(){
+		  
+		$data=array(
+			"formOpen"=>form_open(base_url().'index.php/skeleton_main/comprueba',array('name'=>'formulario','id'=>'form')),
+			"label1"=>form_label('Nombre','name'),
+			"input1"=>form_input('name'),
+			"label2"=>form_label('Apellido','lastname'),
+			"input2"=>form_input('lastname'),
+			"submit"=>form_submit('send','Saludar'),
+			"formClose"=>form_close());
+            $this->load->view('include/body',$data);
+       
+        	
+        
 }
 
+//Función que comprueba los datos
+
+}
 }
