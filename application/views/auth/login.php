@@ -57,7 +57,7 @@ if (defined('ENVIRONMENT') && ENVIRONMENT=="development") {
          <!-- CSS PROPIS -->
 
        <link type="text/css" rel="stylesheet" href="<?php echo base_url('assets/skeleton/css/bootstrap-select.min.css')?>"/>
-       <!--<link type="text/css" rel="stylesheet" href="<?php echo $bootstrap_combined_url;?>" /> -->
+       <!--<link type="text/css" rel="stylesheet" href="<?php echo $bootstrap_combined_url;?>" />--> 
            <!-- JS PROPIS -->
        <script src="<?php echo $jquery_minified_url;?>"></script>
        <script src="<?php echo $bootstrap_minified_url;?>"></script>

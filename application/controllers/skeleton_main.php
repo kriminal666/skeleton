@@ -181,12 +181,26 @@ class skeleton_main extends CI_Controller {
 	protected function _get_html_header_data() {
 
 		$skeleton_css_files=array();
+		//Nuevos CSS de la pnantilla ACE V3
+		$bootstrap_min=base_url("assets/css/bootstrap.min.css");
+		$font_awesome=base_url("assets/css/font-awesome.min.css");
+		//$jquery_ui = base_url("assets/css/jquery-ui-1.10.3.custom.min.css");
+        //$choosen = base_url("assets/css/choose.css");
+        //$datepicker = base_url("assets/css/datepicker.css");
+        //$bootstrap_timepicker = base_url("assets/css/bootstrap-timepicker.css");
+        //$daterangepicker = base_url("assets/css/daterangepicker.css");
+        //$colorpicker = base_url("assets/css/colorpicker.css");
+        $ace_fonts = base_url("assets/css/ace-fonts-css");
+        $ace_min = base_url("assets/css/ace.min.css");
+        $ace_rtl = base_url("assets/css/ace-rtl.min.css");
+        $ace_skins = base_url("assets/css/ace-skins.min.css");
+
+		//$bootstrap_responsive=base_url("assets/css/bootstrap-responsive.min.css");
 		
-		$bootstrap_min=base_url("assets/css/bootstrap.min.original.css");
-		$bootstrap_responsive=base_url("assets/css/bootstrap-responsive.min.css");
-		$font_awesome=base_url("assets/css/font-awesome.min.original.css");
 				
-		array_push($skeleton_css_files, $bootstrap_min, $bootstrap_responsive,$font_awesome);
+		array_push($skeleton_css_files, $bootstrap_min, $font_awesome, $ace_fonts,
+		 $ace_min, $ace_rtl, $ace_skins);
+
 		$header_data['skeleton_css_files']=$skeleton_css_files;			
 		
 		$skeleton_js_files=array();
@@ -197,12 +211,15 @@ class skeleton_main extends CI_Controller {
 		if (defined('ENVIRONMENT') && ENVIRONMENT=="development") {
 			$lodash_js= base_url('assets/js/lodash.min.js');
 			$jquery_js= base_url('assets/js/jquery-1.10.2.min.js');
+
 		}
 		
 		$lazyload_js=base_url("assets/grocery_crud/js/common/lazyload-min.js");
 		$bootstrap_js=base_url("assets/js/bootstrap.min.js");
+		//Nuevo de la plantilla 3
+		$ace_extra = base_url("assets/js/ace-extra.min.js");
 		
-		array_push($skeleton_js_files, $lodash_js ,$jquery_js , $bootstrap_js, $lazyload_js);
+		array_push($skeleton_js_files, $lodash_js ,$jquery_js , $bootstrap_js, $lazyload_js, $ace_extra);
 		$header_data['skeleton_js_files']=$skeleton_js_files;	
 		
 		return $header_data;
