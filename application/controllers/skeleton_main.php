@@ -182,9 +182,9 @@ class skeleton_main extends CI_Controller {
 
 		$skeleton_css_files=array();
 		
-		$bootstrap_min=base_url("assets/css/bootstrap.min.css");
+		$bootstrap_min=base_url("assets/css/bootstrap.min.original.css");
 		$bootstrap_responsive=base_url("assets/css/bootstrap-responsive.min.css");
-		$font_awesome=base_url("assets/css/font-awesome.min.css");
+		$font_awesome=base_url("assets/css/font-awesome.min.original.css");
 				
 		array_push($skeleton_css_files, $bootstrap_min, $bootstrap_responsive,$font_awesome);
 		$header_data['skeleton_css_files']=$skeleton_css_files;			
