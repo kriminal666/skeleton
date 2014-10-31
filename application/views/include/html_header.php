@@ -17,13 +17,22 @@
       
       <!-- END CSS --> 
       
-      <!-- BEGIN JS --> 
+    <script type="text/javascript">
+      window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+    </script>
+
+    <script type="text/javascript">
+      if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+    </script>
+            <!-- BEGIN JS --> 
       
       <?php if (isset($skeleton_js_files)): ?>
-	   <?php foreach($skeleton_js_files as $skeleton_js_file): ?>
+     <?php foreach($skeleton_js_files as $skeleton_js_file): ?>
         <script src="<?php echo $skeleton_js_file; ?>"></script>
        <?php endforeach; ?>
       <?php endif; ?>
+      
+
       
       <!-- END JS -->
       
@@ -46,24 +55,11 @@
       
       <!-- END GROCERY CRUD JS -->
       
-<style type="text/css">
-     body {
-        padding-top: 60px;
-        padding-bottom: 60px;
-		font-family: Arial;
-                font-size: 14px;
-               
-		min-height:900
-		
-     }
-    
-.navbar-text img {
-  max-height:30px;
-  width:auto;
-  vertical-align:middle;
-}
-		
-</style>
+  
       
+     
+
+    
+     
  </head>
  <!-- END html_header.php -->

@@ -181,7 +181,7 @@ class skeleton_main extends CI_Controller {
 	protected function _get_html_header_data() {
 
 		$skeleton_css_files=array();
-		//Nuevos CSS de la pnantilla ACE V3
+		//Nuevos CSS de la plantilla ACE V3
 		$bootstrap_min=base_url("assets/css/bootstrap.min.css");
 		$font_awesome=base_url("assets/css/font-awesome.min.css");
 		//$jquery_ui = base_url("assets/css/jquery-ui-1.10.3.custom.min.css");
@@ -190,7 +190,7 @@ class skeleton_main extends CI_Controller {
         //$bootstrap_timepicker = base_url("assets/css/bootstrap-timepicker.css");
         //$daterangepicker = base_url("assets/css/daterangepicker.css");
         //$colorpicker = base_url("assets/css/colorpicker.css");
-        $ace_fonts = base_url("assets/css/ace-fonts-css");
+        $ace_fonts = base_url("assets/css/ace-fonts.css");
         $ace_min = base_url("assets/css/ace.min.css");
         $ace_rtl = base_url("assets/css/ace-rtl.min.css");
         $ace_skins = base_url("assets/css/ace-skins.min.css");
@@ -215,11 +215,28 @@ class skeleton_main extends CI_Controller {
 		}
 		
 		$lazyload_js=base_url("assets/grocery_crud/js/common/lazyload-min.js");
-		$bootstrap_js=base_url("assets/js/bootstrap.min.js");
+		//$bootstrap_js=base_url("assets/js/bootstrap.min.js");
 		//Nuevo de la plantilla 3
-		$ace_extra = base_url("assets/js/ace-extra.min.js");
+		$ace_extra_js = base_url("assets/js/ace-extra.min.js");
+		$bootstrap_min_js = base_url("assets/js/bootstrap.min.js");
+		$typeahead = base_url("assets/js/typeahead-bs2.min.js");
+		$jquery_ui = base_url("assets/js/jquery-ui-1.10.3.custom.min.js");
+		$jquery_touch = base_url("assets/js/jquery.ui.touch-punch.min.js");
+		$jquery_slimscroll = base_url("assets/js/jquery.slimscroll.min.js");
+		$jquery_easy = base_url("assets/js/jquery.easy-pie-chart.min.js");
+		$jquery_sparkline = base_url("assets/js/jquery.sparkline.min.js");
+		$jquery_flot1 = base_url("assets/js/flot/jquery.flot.min.js");
+		$jquery_flot2 = base_url("assets/js/flot/jquery.flot.pie.min.js");
+		$jquery_flot3 = base_url("assets/js/flot/jquery.flot.resize.min.js");
+		$ace_elements = base_url("assets/js/ace-elements.min.js");
+		$ace_min = base_url("assets/js/ace.min.js");
 		
-		array_push($skeleton_js_files, $lodash_js ,$jquery_js , $bootstrap_js, $lazyload_js, $ace_extra);
+		
+		
+
+		array_push($skeleton_js_files,$ace_extra_js,$bootstrap_min_js,$typeahead,$jquery_ui,$jquery_touch,$jquery_slimscroll,
+			$jquery_easy,$jquery_sparkline,$jquery_flot1,$jquery_flot2,$jquery_flot3,$ace_elements,$ace_min,$lodash_js ,$jquery_js, $lazyload_js);
+		
 		$header_data['skeleton_js_files']=$skeleton_js_files;	
 		
 		return $header_data;
@@ -1230,12 +1247,11 @@ public function saludar(){
 public function carga_body($data=null){
 		  
 	
-			$data['formOpen']=form_open(base_url().'index.php/skeleton_main/comprueba',array('name'=>'formulario','id'=>'form'));
-			$data['label1']=form_label('Nombre','name');
-			$data['input1']=form_input('name');
-			$data['label2']=form_label('Apellido','lastname');
-			$data['input2']=form_input('lastname');
-			$data['submit']=form_submit('send','Saludar');
+			$data['formOpen']=form_open(base_url().'index.php/skeleton_main/comprueba',array('class'=>'form-horizontal','role'=>'form','name'=>'formulario','id'=>'form'));
+			$data['label1']=form_label('Nombre','name',array('class'=>'col-sm-3 control-label no-padding-right'));
+			$data['input1']=form_input(array('name'=>'name','id'=>'form-field-1','class'=>'col-xs-10-col-sm-5'));
+			$data['label2']=form_label('Apellido','lastname',array('class'=>'col-sm-3 control-label no-padding-right'));
+			$data['input2']=form_input(array('name'=>'lastname','id'=>'form-field-2','class'=>'col-xs-10-col-sm-5'));
 			$data['formClose']=form_close();
             $this->load->view('include/body',$data);
        

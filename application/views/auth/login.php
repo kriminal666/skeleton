@@ -116,7 +116,7 @@ if (defined('ENVIRONMENT') && ENVIRONMENT=="development") {
 													<!--BOTÓN DEL REALM-->
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-													<select id="realms" class="selectpicker" name="realm">
+													<select id="form-field-select-3" class="form-control" name="realm">
   		 												 <?php foreach( (array) $realms as $realm): ?>
 		  												 <?php if( $realm == $default_realm): ?>
           												  <option value="<?php echo $realm; ?>" selected="selected"><?php echo $realm; ?></option>
