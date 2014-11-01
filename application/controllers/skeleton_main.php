@@ -50,7 +50,6 @@ class skeleton_main extends CI_Controller {
 		       
         //Helpers
         $this->load->helper('url');
-        
                 
         /* Set language */
 		$current_language=$this->session->userdata("current_language");
@@ -217,19 +216,19 @@ class skeleton_main extends CI_Controller {
 		$lazyload_js=base_url("assets/grocery_crud/js/common/lazyload-min.js");
 		//$bootstrap_js=base_url("assets/js/bootstrap.min.js");
 		//Nuevo de la plantilla 3
-		$ace_extra_js = base_url("assets/js/ace-extra.min.js");
-		$bootstrap_min_js = base_url("assets/js/bootstrap.min.js");
-		$typeahead = base_url("assets/js/typeahead-bs2.min.js");
-		$jquery_ui = base_url("assets/js/jquery-ui-1.10.3.custom.min.js");
-		$jquery_touch = base_url("assets/js/jquery.ui.touch-punch.min.js");
-		$jquery_slimscroll = base_url("assets/js/jquery.slimscroll.min.js");
-		$jquery_easy = base_url("assets/js/jquery.easy-pie-chart.min.js");
-		$jquery_sparkline = base_url("assets/js/jquery.sparkline.min.js");
-		$jquery_flot1 = base_url("assets/js/flot/jquery.flot.min.js");
-		$jquery_flot2 = base_url("assets/js/flot/jquery.flot.pie.min.js");
-		$jquery_flot3 = base_url("assets/js/flot/jquery.flot.resize.min.js");
-		$ace_elements = base_url("assets/js/ace-elements.min.js");
-		$ace_min = base_url("assets/js/ace.min.js");
+		$ace_extra_js = base_url("/assets/js/ace-extra.min.js");
+		$bootstrap_min_js = base_url("/assets/js/bootstrap.min.js");
+		$typeahead = base_url("/assets/js/typeahead-bs2.min.js");
+		$jquery_ui = base_url("/assets/js/jquery-ui-1.10.3.custom.min.js");
+		$jquery_touch = base_url("/assets/js/jquery.ui.touch-punch.min.js");
+		$jquery_slimscroll = base_url("/assets/js/jquery.slimscroll.min.js");
+		$jquery_easy = base_url("/assets/js/jquery.easy-pie-chart.min.js");
+		$jquery_sparkline = base_url("/assets/js/jquery.sparkline.min.js");
+		$jquery_flot1 = base_url("/assets/js/flot/jquery.flot.min.js");
+		$jquery_flot2 = base_url("/assets/js/flot/jquery.flot.pie.min.js");
+		$jquery_flot3 = base_url("/assets/js/flot/jquery.flot.resize.min.js");
+		$ace_elements = base_url("/assets/js/ace-elements.min.js");
+		$ace_min = base_url("/assets/js/ace.min.js");
 		
 		
 		

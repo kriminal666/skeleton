@@ -18,73 +18,14 @@
           <ul class="nav ace-nav">
             <li class="grey">
               <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                <i class="icon-tasks"></i>
-                <span class="badge badge-grey">4</span>
+                <i class="icon-filter"></i>
+                <span class="badge badge-grey"><?php echo lang('language');?></span>
               </a>
 
               <ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
                 <li class="dropdown-header">
                   <i class="icon-ok"></i>
-                  4 Tasks to complete
-                </li>
-
-                <li>
-                  <a href="#">
-                    <div class="clearfix">
-                      <span class="pull-left">Software Update</span>
-                      <span class="pull-right">65%</span>
-                    </div>
-
-                    <div class="progress progress-mini ">
-                      <div style="width:65%" class="progress-bar "></div>
-                    </div>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#">
-                    <div class="clearfix">
-                      <span class="pull-left">Hardware Upgrade</span>
-                      <span class="pull-right">35%</span>
-                    </div>
-
-                    <div class="progress progress-mini ">
-                      <div style="width:35%" class="progress-bar progress-bar-danger"></div>
-                    </div>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#">
-                    <div class="clearfix">
-                      <span class="pull-left">Unit Testing</span>
-                      <span class="pull-right">15%</span>
-                    </div>
-
-                    <div class="progress progress-mini ">
-                      <div style="width:15%" class="progress-bar progress-bar-warning"></div>
-                    </div>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#">
-                    <div class="clearfix">
-                      <span class="pull-left">Bug Fixes</span>
-                      <span class="pull-right">90%</span>
-                    </div>
-
-                    <div class="progress progress-mini progress-striped active">
-                      <div style="width:90%" class="progress-bar progress-bar-success"></div>
-                    </div>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#">
-                    See tasks with details
-                    <i class="icon-arrow-right"></i>
-                  </a>
+                  <?php echo lang($this->session->userdata('current_language'));?>
                 </li>
               </ul>
             </li>
@@ -229,7 +170,7 @@
               <a data-toggle="dropdown" href="#" class="dropdown-toggle">
                 <img class="nav-user-photo" src="assets/avatars/user.jpg" alt="Jason's Photo" />
                 <span class="user-info">
-                  <small>Welcome,</small>
+                  <small>Welcome</small>
                    <?php echo $this->session->userdata('username');?>
                 
                 </span>
@@ -314,7 +255,7 @@
 
           <ul class="nav nav-list">
             <li class="active">
-              <a href="<?php echo base_url();?>">
+              <a href="<?php echo base_url('/index.php/');?>">
                 <i class="icon-dashboard"></i>
                 <span class="menu-text"><?php echo $body_header_app_name;?></span>
               </a>
@@ -322,7 +263,7 @@
              <?php if ($show_maintenace_menu): ?>
             <li>
               <a href="#" class="dropdown-toggle">
-                <i class="icon-desktop"></i>
+                <i class="icon-cogs"></i>
                 <span class="menu-text"><?php echo lang('maintenances');?> </span>
 
                 <b class="arrow icon-angle-down"></b>
@@ -330,14 +271,14 @@
 
               <ul class="submenu">
                 <li>
-                  <a href="<?=base_url()?>index.php/skeleton_main/organizational_unit">
+                  <a href="<?=base_url('/index.php/skeleton_main/organizational_unit')?>">
                     <i class="icon-double-angle-right"></i>
                     <?php echo lang('organizationalunit_menu');?>
                   </a>
                 </li>
 
                 <li>
-                  <a href="<?=base_url()?>index.php/skeleton_main/location">
+                  <a href="<?=base_url('/index.php/skeleton_main/location')?>">
                     <i class="icon-double-angle-right"></i>
                     <?php echo lang('location_menu');?>
                   </a>
@@ -348,7 +289,7 @@
              <?php if ($show_managment_menu): ?>
             <li>
               <a href="#" class="dropdown-toggle">
-                <i class="icon-list"></i>
+                <i class="icon-cog"></i>
                 <span class="menu-text"> <?php echo lang('managment');?> </span>
 
                 <b class="arrow icon-angle-down"></b>
@@ -356,20 +297,20 @@
 
               <ul class="submenu">
                 <li>
-                  <a href="<?=base_url()?>index.php/skeleton_main/users">
+                  <a href="<?=base_url('/index.php/skeleton_main/users')?>">
                     <i class="icon-double-angle-right"></i>
                     <?php echo lang('users');?>
                   </a>
                 </li>
 
                 <li>
-                  <a href="<?=base_url()?>index.php/skeleton_main/groups">
+                  <a href="<?=base_url('/index.php/skeleton_main/groups')?>">
                     <i class="icon-double-angle-right"></i>
                     <?php echo lang('groups');?>
                   </a>
                 </li>
                  <li>
-                  <a href="<?=base_url()?>index.php/skeleton_main/preferences">
+                  <a href="<?=base_url('/index.php/skeleton_main/preferences')?>">
                     <i class="icon-double-angle-right"></i>
                     <?php echo lang('preferences');?>
                   </a>
@@ -380,7 +321,7 @@
 
             <li>
               <a href="#" class="dropdown-toggle">
-                <i class="icon-edit"></i>
+                <i class="icon-filter"></i>
                 <span class="menu-text"><?php echo lang('language');?></span>
 
                 <b class="arrow icon-angle-down"></b>
@@ -388,21 +329,21 @@
 
               <ul class="submenu">
                 <li>
-                  <a href="<?=base_url()?>index.php/skeleton_main/change_language/catalan">
+                  <a href="<?=base_url('/index.php/skeleton_main/change_language/catalan')?>">
                     <i class="icon-double-angle-right"></i>
                     <?php echo lang('catalan');?>
                   </a>
                 </li>
 
                 <li>
-                  <a href="<?=base_url()?>index.php/skeleton_main/change_language/spanish">
+                  <a href="<?=base_url('/index.php/skeleton_main/change_language/spanish')?>">
                     <i class="icon-double-angle-right"></i>
                     <?php echo lang('spanish');?>
                   </a>
                 </li>
 
                 <li>
-                  <a href="<?=base_url()?>index.php/skeleton_main/change_language/english">
+                  <a href="<?=base_url('/index.php/skeleton_main/change_language/english')?>">
                     <i class="icon-double-angle-right"></i>
                     <?php echo lang('english');?>
                   </a>
@@ -413,7 +354,7 @@
 
           <li>
               <a href="#" class="dropdown-toggle">
-                <i class="icon-edit"></i>
+                <i class="icon-fire"></i>
                 <span class="menu-text">Apartado Criminal</span>
 
                 <b class="arrow icon-angle-down"></b>
@@ -421,7 +362,7 @@
 
               <ul class="submenu">
                 <li>
-                  <a href="<?=base_url()?>index.php/skeleton_main/saludar">
+                  <a href="<?=base_url('/index.php/skeleton_main/saludar')?>">
                     <i class="icon-double-angle-right"></i>
                     Saludar
                   </a>
@@ -450,7 +391,7 @@
             <ul class="breadcrumb">
               <li>
                 <i class="icon-home home-icon"></i>
-                <a href="#">Home</a>
+                <a href="<?php echo base_url('/index.php');?>">Home</a>
               </li>
               <li class="active">Dashboard</li>
             </ul><!-- .breadcrumb -->
