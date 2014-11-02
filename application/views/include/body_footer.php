@@ -36,17 +36,6 @@
 </div>
     <!-- basic scripts -->
 
-    <!--[if !IE]> -->
-
-    <script type="text/javascript">
-      window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
-    </script>
-
-    <script type="text/javascript">
-      if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
-    </script>
-    
-
     <!-- inline scripts related to this page -->
 
     <script type="text/javascript">

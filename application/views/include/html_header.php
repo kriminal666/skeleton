@@ -2,7 +2,7 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
  <head>
-      <title><?php echo $header_title . "Plantilla per defecte!!!";?></title>
+      <title><?php echo $header_title;?></title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="description" content="<?php echo $header_description;?>">
@@ -18,11 +18,11 @@
       <!-- END CSS --> 
       
     <script type="text/javascript">
-      window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+      window.jQuery || document.write("<script src='localhost/skeleton/assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
     </script>
 
     <script type="text/javascript">
-      if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+      if("ontouchend" in document) document.write("<script src='localhost/skeleton/assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
     </script>
             <!-- BEGIN JS --> 
       

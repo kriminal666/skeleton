@@ -1,5 +1,5 @@
 <body>
-            <div class="navbar navbar-default" id="navbar">
+    <div class="navbar navbar-default" id="navbar">
       <script type="text/javascript">
         try{ace.settings.check('navbar' , 'fixed')}catch(e){}
       </script>
@@ -381,7 +381,7 @@
             try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
           </script>
         </div>
-
+         <!--DESDE AQUÍ SE QUITA Y SE COPIA EN LA PARTE SUPERIOR DE CADA VISTA-->
         <div class="main-content">
           <div class="breadcrumbs" id="breadcrumbs">
             <script type="text/javascript">
@@ -416,6 +416,6 @@
                 </small>
               </h1>
             </div><!-- /.page-header -->
-
+<!--HASTA AQUÍ PARA EL SEGUIMIENTO DE ZONA DE LAS 2 BARRAS SUPERIORES-->
          
 <!-- END OF body_header. DO NOT CLOSE Body tag. Closed in body footer--> 
