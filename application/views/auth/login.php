@@ -59,17 +59,18 @@ if (defined('ENVIRONMENT') && ENVIRONMENT=="development") {
        <link type="text/css" rel="stylesheet" href="<?php echo base_url('assets/skeleton/css/bootstrap-select.min.css')?>"/>
        <!--<link type="text/css" rel="stylesheet" href="<?php echo $bootstrap_combined_url;?>" />--> 
            <!-- JS PROPIS -->
-       <script src="<?php echo $jquery_minified_url;?>"></script>
+      <!-- <script src="<?php echo $jquery_minified_url;?>"></script>
        <script src="<?php echo $bootstrap_minified_url;?>"></script>
        <script src="<?php echo base_url('assets/skeleton/js/bootstrap-select.min.js')?>"></script>
        <script type="text/javascript" id="bootstrap_select">
         $(window).on('load', function () {
             $('.selectpicker').selectpicker();
 		});
-   </script>
+   </script>-->
 	</head>
 
 	<body class="login-layout">
+	
 		<div class="main-container">
 			<div class="main-content">
 				<div class="row">
@@ -89,10 +90,23 @@ if (defined('ENVIRONMENT') && ENVIRONMENT=="development") {
 							<div class="position-relative">
 								<div id="login-box" class="login-box visible widget-box no-border">
 									<div class="widget-body">
+											<div class="container">	
+                                             <center><div id="maintenance-mode-message" class="text-error"></div></center>
+                                             <center><div class="text-error"><?php echo $message;?></div></center>
+     
+                                             <?php if ($this->session->flashdata('spam_alert')): ?>
+                                             <center>
+	                                         <div class="alert">
+                                             <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                             <strong><?php echo lang('Atention');?>! </strong> <?php echo lang('SPAM_Message_Part1');?><br/>
+                                             <?php echo lang('SPAM_Message_Part2');?>
+                                             </div>
+                                            </center>
+                                            <?php endif; ?></div>
 										<div class="widget-main">
 											<h4 class="header blue lighter bigger">
 												<i class="icon-coffee green"></i>
-												Please Enter Your Information
+												Si us plau, entreu:
 											</h4>
 
 											<div class="space-6"></div>
