@@ -17,13 +17,7 @@
       
       <!-- END CSS --> 
       
-    <script type="text/javascript">
-      window.jQuery || document.write("<script src='localhost/skeleton/assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
-    </script>
-
-    <script type="text/javascript">
-      if("ontouchend" in document) document.write("<script src='localhost/skeleton/assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
-    </script>
+   
             <!-- BEGIN JS --> 
       
       <?php if (isset($skeleton_js_files)): ?>

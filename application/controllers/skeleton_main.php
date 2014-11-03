@@ -11,6 +11,8 @@ class skeleton_main extends CI_Controller {
 	public $body_footer_view ='include/body_footer' ;
 
 	public $body_header_lang_file ='body_header' ;
+	
+	public $saludar ='include/saludar' ;
 
 	public $preferences_page = "skeleton_main/user_preferences";
 
@@ -216,25 +218,25 @@ class skeleton_main extends CI_Controller {
 		$lazyload_js=base_url("assets/grocery_crud/js/common/lazyload-min.js");
 		//$bootstrap_js=base_url("assets/js/bootstrap.min.js");
 		//Nuevo de la plantilla 3
-		$ace_extra_js = base_url("/assets/js/ace-extra.min.js");
-		$bootstrap_min_js = base_url("/assets/js/bootstrap.min.js");
-		$typeahead = base_url("/assets/js/typeahead-bs2.min.js");
-		$jquery_ui = base_url("/assets/js/jquery-ui-1.10.3.custom.min.js");
-		$jquery_touch = base_url("/assets/js/jquery.ui.touch-punch.min.js");
-		$jquery_slimscroll = base_url("/assets/js/jquery.slimscroll.min.js");
-		$jquery_easy = base_url("/assets/js/jquery.easy-pie-chart.min.js");
-		$jquery_sparkline = base_url("/assets/js/jquery.sparkline.min.js");
-		$jquery_flot1 = base_url("/assets/js/flot/jquery.flot.min.js");
-		$jquery_flot2 = base_url("/assets/js/flot/jquery.flot.pie.min.js");
-		$jquery_flot3 = base_url("/assets/js/flot/jquery.flot.resize.min.js");
-		$ace_elements = base_url("/assets/js/ace-elements.min.js");
-		$ace_min = base_url("/assets/js/ace.min.js");
+		$ace_extra_js = base_url("assets/js/ace-extra.min.js");
+		$bootstrap_min_js = base_url("assets/js/bootstrap.min.js");
+		$typeahead = base_url("assets/js/typeahead-bs2.min.js");
+		//$jquery_ui = base_url("assets/js/jquery-ui-1.10.3.custom.min.js");
+		//$jquery_touch = base_url("assets/js/jquery.ui.touch-punch.min.js");
+		//$jquery_slimscroll = base_url("assets/js/jquery.slimscroll.min.js");
+		//$jquery_easy = base_url("assets/js/jquery.easy-pie-chart.min.js");
+		//$jquery_sparkline = base_url("assets/js/jquery.sparkline.min.js");
+		//$jquery_flot1 = base_url("assets/js/flot/jquery.flot.min.js");
+		//$jquery_flot2 = base_url("assets/js/flot/jquery.flot.pie.min.js");
+		//$jquery_flot3 = base_url("assets/js/flot/jquery.flot.resize.min.js");
+		$ace_elements = base_url("assets/js/ace-elements.min.js");
+		$ace_min = base_url("assets/js/ace.min.js");
 		
 		
-		
+		//SE CARGAN SOLO LOS JS QUE APARECEN EN TYPOGRAFY MENOS prettify.js
+		//SE SUSTITUYE jquery-2.0.3.min.js por jquery-1.10.2.min.js que cargamos el primero
 
-		array_push($skeleton_js_files,$ace_extra_js,$bootstrap_min_js,$typeahead,$jquery_ui,$jquery_touch,$jquery_slimscroll,
-			$jquery_easy,$jquery_sparkline,$jquery_flot1,$jquery_flot2,$jquery_flot3,$ace_elements,$ace_min,$lodash_js ,$jquery_js, $lazyload_js);
+		array_push($skeleton_js_files,$jquery_js,$ace_extra_js,$bootstrap_min_js,$typeahead,$ace_elements,$ace_min,$lodash_js, $lazyload_js);
 		
 		$header_data['skeleton_js_files']=$skeleton_js_files;	
 		
@@ -1252,7 +1254,7 @@ public function carga_body($data=null){
 			$data['label2']=form_label('Apellido','lastname',array('class'=>'col-sm-3 control-label no-padding-right'));
 			$data['input2']=form_input(array('name'=>'lastname','id'=>'form-field-2','class'=>'col-xs-10-col-sm-5'));
 			$data['formClose']=form_close();
-            $this->load->view('include/body',$data);
+            $this->load->view('include/saludar',$data);
        
        	
         
