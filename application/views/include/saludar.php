@@ -61,30 +61,31 @@
 		       <i class="icon-ok bigger-110"></i>
 			      Saludar
 		       </button>
-         </div>
-     </div>
-
-<?php echo $formClose; ?><br />
-</div>
-
-<hr /> <div class="space-4"></div>
-<?php if(isset($button)) :?>
-	<table border="2px" style="background-color:#00FF00">
-				<tr>
-					<td>
+         </div></div>
+         <?php if(isset($button)) :?>
+  <div class="col-sm-6">
+  <table border="2px" style="background-color:#00FF00">
+        <tr>
+          <td>
         <?php if(isset($name) && isset($lastname)) : ?>
-			<?php if(($name!="")&&($lastname!="")) :?>
+      <?php if(($name!="")&&($lastname!="")) :?>
                   <h2>Hola <u><?=$name?></u> tu apellido es <u><?=$lastname?></u></h2>
             <?php endif ?>
- 		<?php endif ?>
-  		<?php if(isset($error)) :?>
-  				<?php  echo $error;?>
+    <?php endif ?>
+      <?php if(isset($error)) :?>
+          <?php  echo $error;?>
 
-		<?php endif ?>
-							</td>
-				</tr>
-			</table>
+    <?php endif ?>
+              </td>
+        </tr>
+      </table>
 <?php endif ?>
 
 
 </div>
+     
+
+<?php echo $formClose; ?><br />
+</div>
+</div>
+
