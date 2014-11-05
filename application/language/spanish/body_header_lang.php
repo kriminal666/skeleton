@@ -17,6 +17,7 @@ $lang['managment']   = 'Gestió';
 $lang['users'] = 'Usuaris';
 $lang['groups'] = 'Grups';
 $lang['preferences'] = 'Preferències';
+$lang['alta_profes'] = 'Crear profesor';
 
 //MAINTENANCES MENU
 $lang['maintenances'] = "Manteniments";

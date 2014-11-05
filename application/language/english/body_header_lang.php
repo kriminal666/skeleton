@@ -13,14 +13,15 @@
  */
 
 //MANAGMENT MENU
-$lang['managment']   = 'Gestió';
-$lang['users'] = 'Usuaris';
-$lang['groups'] = 'Grups';
-$lang['preferences'] = 'Preferències';
+$lang['managment']   = 'Management';
+$lang['users'] = 'Users';
+$lang['groups'] = 'Groups';
+$lang['preferences'] = 'Preferences';
+$lang['alta_profes'] = 'Create teacher';
 
 //MAINTENANCES MENU
-$lang['maintenances'] = "Manteniments";
-$lang['organizationalunit_menu'] = "Unitats organitzatives";
+$lang['maintenances'] = "Maintenance";
+$lang['organizationalunit_menu'] = "Organizational unit";
 
 //location menu
 $lang['location_menu'] = 'Locations';

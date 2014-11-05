@@ -1280,5 +1280,14 @@ public function carga_body($data=null){
          $this->carga_body($data);
          $this->_load_body_footer();
     }
+    public function alta_profe(){
+    	//load html header
+    	 $this->_load_html_header($this->_get_html_header_data());
+         //load body header
+         $this->_load_body_header();
+         //load body
+         $this->load->view('include/alta_profes');
+         $this->_load_body_footer();
+    }
 }
 }

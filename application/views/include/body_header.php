@@ -297,6 +297,12 @@
 
               <ul class="submenu">
                 <li>
+                  <a href="<?=base_url('/index.php/skeleton_main/alta_profe')?>">
+                    <i class="icon-double-angle-right"></i>
+                    <?php echo lang('alta_profes');?>
+                  </a>
+                </li>
+                <li>
                   <a href="<?=base_url('/index.php/skeleton_main/users')?>">
                     <i class="icon-double-angle-right"></i>
                     <?php echo lang('users');?>

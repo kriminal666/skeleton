@@ -26,6 +26,7 @@ if (defined('ENVIRONMENT') && ENVIRONMENT=="development") {
         
 		<link href="<?php echo base_url('assets/css/bootstrap.min.css');?>" rel="stylesheet" /> 
 		<link rel="stylesheet" href="<?php echo base_url('assets/css/font-awesome.min.css')?>" />
+		<link rel="stylesheet" href="<?php echo base_url('assets/css/chosen.css')?>" />
 
 		<!--[if IE 7]>
 		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
@@ -67,6 +68,8 @@ if (defined('ENVIRONMENT') && ENVIRONMENT=="development") {
             $('.selectpicker').selectpicker();
 		});
    </script>-->
+     <script type="text/javascript"src="<?php echo base_url('assets/js/jquery-1.10.2.min.js');?>"></script>
+	 <script src="<?php echo base_url('assets/js/chosen.jquery.min.js');?>"></script>
 	</head>
 
 	<body class="login-layout">
@@ -130,7 +133,7 @@ if (defined('ENVIRONMENT') && ENVIRONMENT=="development") {
 													<!--BOTÓN DEL REALM-->
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-													<select id="form-field-select-3" class="form-control" name="realm">
+													<select id="form-field-select-3" class="width-100 chosen-select" name="realm">
   		 												 <?php foreach( (array) $realms as $realm): ?>
 		  												 <?php if( $realm == $default_realm): ?>
           												  <option value="<?php echo $realm; ?>" selected="selected"><?php echo $realm; ?></option>
@@ -281,9 +284,7 @@ if (defined('ENVIRONMENT') && ENVIRONMENT=="development") {
 
 		<!--[if !IE]> -->
 
-		<script type="text/javascript">
-			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
-		</script>
+		
 
 		<!-- <![endif]-->
 
@@ -293,17 +294,18 @@ if (defined('ENVIRONMENT') && ENVIRONMENT=="development") {
 </script>
 <![endif]-->
 
-		<script type="text/javascript">
-			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
-		</script>
 
 		<!-- inline scripts related to this page -->
 
-		<script type="text/javascript">
+		<!--<script type="text/javascript">
 			function show_box(id) {
 			 jQuery('.widget-box.visible').removeClass('visible');
 			 jQuery('#'+id).addClass('visible');
 			}
+		</script>-->
+		
+		<script type="text/javascript">
+			$(".chosen-select").chosen();
 		</script>
 	</body>
 </html>
