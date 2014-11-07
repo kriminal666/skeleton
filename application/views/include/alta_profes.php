@@ -33,8 +33,30 @@
                 </small>
               </h1>
             </div>
-        </div>
-
+        </div><!--FIN BARRAS SUPERIORES-->
+<!--COMIENZA FORMULARIO-->
+<div class="col-xs-12">
+      <form><br />
+        <div class="form-group">
+         <p>Nombre </p>
+           <div class="col-sm-9">
+             <input class="col-xs-10-col-sm-5" type="text" />
+           </div>
+       </div>
+       <div class="space-4"></div>
+       <div class="form-group">
+                   <p>Apellido</p>
+                   <div class="col-sm-9">
+                  <input class="col-xs-10-col-sm-5" type="text" />
+                   </div>
+               </div>
+      <div class="clearfix form-actions">
+         <div class="col-md-offset-3 col-md-9">
+           <button class="btn btn-info" type="button" name="send">
+           <i class="icon-ok bigger-110"></i>
+            Enviar
+           </button>
+         </div></div>
 
 
 

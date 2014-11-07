@@ -38,7 +38,7 @@
 <div class="row">
 
   
-<?php echo "<h1>Saludar al usuario</h1>"; ?>
+<h1>Saludar al usuario</h1>
 
 	<div class="col-xs-12">
       <?php echo $formOpen;?><br />
