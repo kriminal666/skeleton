@@ -68,7 +68,7 @@ if (defined('ENVIRONMENT') && ENVIRONMENT=="development") {
             $('.selectpicker').selectpicker();
 		});
    </script>-->
-     <script type="text/javascript"src="<?php echo base_url('assets/js/jquery-1.10.2.min.js');?>"></script>
+     <script type="text/javascript" src="<?php echo base_url('assets/js/jquery-1.10.2.min.js');?>"></script>
 	 <script src="<?php echo base_url('assets/js/chosen.jquery.min.js');?>"></script>
 	</head>
 
@@ -182,9 +182,10 @@ if (defined('ENVIRONMENT') && ENVIRONMENT=="development") {
 
 										<div class="toolbar clearfix">
 											<div>
-												<a href="forgot_password"<?php echo lang('login_forgot_password');?>  class="forgot-password-link">
+												<a href="forgot_password"  class="forgot-password-link">
 													<i class="icon-arrow-left"></i>
-													I forgot my password
+
+													<?php echo lang('login_forgot_password');?>
 												</a>
 											</div>
 
@@ -197,82 +198,6 @@ if (defined('ENVIRONMENT') && ENVIRONMENT=="development") {
 										</div>
 									</div><!-- /widget-body -->
 								</div><!-- /login-box -->
-
-								
-                               <div id="signup-box" class="signup-box widget-box no-border">
-									<div class="widget-body">
-										<div class="widget-main">
-											<h4 class="header green lighter bigger">
-												<i class="icon-group blue"></i>
-												New User Registration
-											</h4>
-
-											<div class="space-6"></div>
-											<p> Enter your details to begin: </p>
-
-											<form>
-												<fieldset>
-													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="email" class="form-control" placeholder="Email" />
-															<i class="icon-envelope"></i>
-														</span>
-													</label>
-
-													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="Username" />
-															<i class="icon-user"></i>
-														</span>
-													</label>
-
-													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Password" />
-															<i class="icon-lock"></i>
-														</span>
-													</label>
-
-													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Repeat password" />
-															<i class="icon-retweet"></i>
-														</span>
-													</label>
-
-													<label class="block">
-														<input type="checkbox" class="ace" />
-														<span class="lbl">
-															I accept the
-															<a href="#">User Agreement</a>
-														</span>
-													</label>
-
-													<div class="space-24"></div>
-
-													<div class="clearfix">
-														<button type="reset" class="width-30 pull-left btn btn-sm">
-															<i class="icon-refresh"></i>
-															Reset
-														</button>
-
-														<button type="button" class="width-65 pull-right btn btn-sm btn-success">
-															Register
-															<i class="icon-arrow-right icon-on-right"></i>
-														</button>
-													</div>
-												</fieldset>
-											</form>
-										</div>
-
-										<div class="toolbar center">
-											<a href="#" onclick="show_box('login-box'); return false;" class="back-to-login-link">
-												<i class="icon-arrow-left"></i>
-												Back to login
-											</a>
-										</div>
-									</div><!-- /widget-body -->
-								</div><!-- /signup-box -->
 							</div><!-- /position-relative -->
 						</div>
 					</div><!-- /.col -->
@@ -306,6 +231,8 @@ if (defined('ENVIRONMENT') && ENVIRONMENT=="development") {
 		
 		<script type="text/javascript">
 			$(".chosen-select").chosen();
+		</script>
+		
 		</script>
 	</body>
 </html>
