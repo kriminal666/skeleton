@@ -18,7 +18,16 @@ $lang['users'] = 'Users';
 $lang['groups'] = 'Groups';
 $lang['preferences'] = 'Preferences';
 $lang['alta_profes'] = 'Create teacher';
-
+$lang['name'] = 'Name';
+$lang['lastname'] = 'Lastname';
+$lang['tlf'] = 'Phone';
+$lang['address'] = 'Address';
+$lang['identi'] = 'DNI';
+$lang['date'] = 'Date';
+$lang['nace'] = 'birthplace';
+$lang['village'] = 'Town';
+$lang['cp'] = 'Postal Code';
+$lang['email'] = 'email';
 //MAINTENANCES MENU
 $lang['maintenances'] = "Maintenance";
 $lang['organizationalunit_menu'] = "Organizational unit";

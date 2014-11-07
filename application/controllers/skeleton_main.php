@@ -185,13 +185,14 @@ class skeleton_main extends CI_Controller {
 		//Nuevos CSS de la plantilla ACE V3
 		$bootstrap_min=base_url("assets/css/bootstrap.min.css");
 		$font_awesome=base_url("assets/css/font-awesome.min.css");
-		//$jquery_ui = base_url("assets/css/jquery-ui-1.10.3.custom.min.css");
+		$jquery_ui = base_url("assets/css/jquery-ui-1.10.3.custom.min.css");
         //$choosen = base_url("assets/css/choose.css");
-        //$datepicker = base_url("assets/css/datepicker.css");
-        //$bootstrap_timepicker = base_url("assets/css/bootstrap-timepicker.css");
-        //$daterangepicker = base_url("assets/css/daterangepicker.css");
-        //$colorpicker = base_url("assets/css/colorpicker.css");
+        $datepicker = base_url("assets/css/datepicker.css");
+        $bootstrap_timepicker = base_url("assets/css/bootstrap-timepicker.css");
+        $daterangepicker = base_url("assets/css/daterangepicker.css");
+        $colorpicker = base_url("assets/css/colorpicker.css");
         $ace_fonts = base_url("assets/css/ace-fonts.css");
+        $ace_extra_min = base_url("assets/css/jquery-ui-1.10.3.full.min.css");
         $ace_min = base_url("assets/css/ace.min.css");
         $ace_rtl = base_url("assets/css/ace-rtl.min.css");
         $ace_skins = base_url("assets/css/ace-skins.min.css");
@@ -200,7 +201,8 @@ class skeleton_main extends CI_Controller {
 		
 				
 		array_push($skeleton_css_files, $bootstrap_min, $font_awesome, $ace_fonts,
-		 $ace_min, $ace_rtl, $ace_skins);
+		 $ace_min,$ace_extra_min, $ace_rtl, $ace_skins,$datepicker,$bootstrap_timepicker,$daterangepicker,$jquery_ui,
+		 $colorpicker);
 
 		$header_data['skeleton_css_files']=$skeleton_css_files;			
 		
@@ -221,8 +223,10 @@ class skeleton_main extends CI_Controller {
 		$ace_extra_js = base_url("assets/js/ace-extra.min.js");
 		$bootstrap_min_js = base_url("assets/js/bootstrap.min.js");
 		$typeahead = base_url("assets/js/typeahead-bs2.min.js");
+		$jquery_full_min = base_url("assets/js/jquery-ui-1.10.3.full.min.js");
 		//$jquery_ui = base_url("assets/js/jquery-ui-1.10.3.custom.min.js");
-		//$jquery_touch = base_url("assets/js/jquery.ui.touch-punch.min.js");
+		$jquery_touch = base_url("assets/js/jquery.ui.touch-punch.min.js");
+		
 		//$jquery_slimscroll = base_url("assets/js/jquery.slimscroll.min.js");
 		//$jquery_easy = base_url("assets/js/jquery.easy-pie-chart.min.js");
 		//$jquery_sparkline = base_url("assets/js/jquery.sparkline.min.js");
@@ -236,7 +240,7 @@ class skeleton_main extends CI_Controller {
 		//SE CARGAN SOLO LOS JS QUE APARECEN EN TYPOGRAFY MENOS prettify.js
 		//SE SUSTITUYE jquery-2.0.3.min.js por jquery-1.10.2.min.js que cargamos el primero
 
-		array_push($skeleton_js_files,$jquery_js,$ace_extra_js,$bootstrap_min_js,$typeahead,$ace_elements,$ace_min,$lodash_js, $lazyload_js);
+		array_push($skeleton_js_files,$jquery_js,$ace_extra_js,$bootstrap_min_js,$typeahead,$jquery_full_min,$jquery_touch,$ace_elements,$ace_min,$lodash_js, $lazyload_js);
 		
 		$header_data['skeleton_js_files']=$skeleton_js_files;	
 		

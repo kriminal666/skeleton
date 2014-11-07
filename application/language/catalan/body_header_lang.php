@@ -18,7 +18,16 @@ $lang['users'] = 'Usuaris';
 $lang['groups'] = 'Grups';
 $lang['preferences'] = 'Preferències';
 $lang['alta_profes'] = 'Alta Professor';
-
+$lang['name'] = 'Nom';
+$lang['lastname'] = 'Cognoms';
+$lang['tlf'] = 'Telefon';
+$lang['address'] = 'Adreça';
+$lang['identi'] = 'DNI';
+$lang['date'] = 'Data';
+$lang['nace'] = 'Lloc de Naixement';
+$lang['village'] = 'Municipi';
+$lang['cp'] = 'Codi Postal';
+$lang['email'] = 'email';
 //MAINTENANCES MENU
 $lang['maintenances'] = "Manteniments";
 $lang['organizationalunit_menu'] = "Unitats organitzatives";

@@ -48,12 +48,7 @@
       <?php endif; ?>
       
       <!-- END GROCERY CRUD JS -->
-      
-  
-      
      
-
-    
      
  </head>
  <!-- END html_header.php -->
