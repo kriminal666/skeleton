@@ -374,6 +374,12 @@
                     Saludar
                   </a>
                 </li>
+                 <li>
+                  <a href="<?=base_url('/index.php/skeleton_main/location2')?>">
+                    <i class="icon-double-angle-right"></i>
+                    Prueba GroceryCRUD
+                  </a>
+                </li>
                </ul>
             </li>
 

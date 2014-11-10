@@ -17,6 +17,16 @@ $lang['managment']   = 'Gestió';
 $lang['users'] = 'Usuaris';
 $lang['groups'] = 'Grups';
 $lang['preferences'] = 'Preferències';
+
+//MAINTENANCES MENU
+$lang['maintenances'] = "Manteniments";
+$lang['organizationalunit_menu'] = "Unitats organitzatives";
+$lang['local'] = 'Lugar';
+
+//location menu
+$lang['location_menu'] = 'Locations';
+//Alta profes
+$lang['email'] = 'Email';
 $lang['alta_profes'] = 'Crear profesor';
 $lang['name'] = 'Nombre';
 $lang['lastname'] = 'Apellidos';
@@ -24,11 +34,7 @@ $lang['tlf'] = 'Telefono';
 $lang['address'] = 'Dirección';
 $lang['identi'] = 'DNI';
 $lang['date'] = 'Fecha';
-//MAINTENANCES MENU
-$lang['maintenances'] = "Manteniments";
-$lang['organizationalunit_menu'] = "Unitats organitzatives";
-$lang['local'] = 'Lugar de nacimiento';
+$lang['place'] = 'Nacimiento';
 $lang['village'] = 'Municipio';
-$lang['cp'] = 'Código Postal';
-//location menu
-$lang['location_menu'] = 'Locations';
+$lang['cp'] = 'CP';
+$lang['cp_place'] = 'Código Postal'

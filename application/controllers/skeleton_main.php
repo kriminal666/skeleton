@@ -226,7 +226,6 @@ class skeleton_main extends CI_Controller {
 		$jquery_full_min = base_url("assets/js/jquery-ui-1.10.3.full.min.js");
 		//$jquery_ui = base_url("assets/js/jquery-ui-1.10.3.custom.min.js");
 		$jquery_touch = base_url("assets/js/jquery.ui.touch-punch.min.js");
-		
 		//$jquery_slimscroll = base_url("assets/js/jquery.slimscroll.min.js");
 		//$jquery_easy = base_url("assets/js/jquery.easy-pie-chart.min.js");
 		//$jquery_sparkline = base_url("assets/js/jquery.sparkline.min.js");
@@ -245,6 +244,19 @@ class skeleton_main extends CI_Controller {
 		$header_data['skeleton_js_files']=$skeleton_js_files;	
 		
 		return $header_data;
+	}
+	public function location2(){
+		$this->current_table="users";
+		$this->grocery_crud->set_table($this->current_table);
+		$output = $this->grocery_crud->render();
+
+        $this->_load_html_header($this->_get_html_header_data(),$output); 
+	    $this->_load_body_header();
+			
+        $this->load->view('prueba_grocery',$output);     
+
+	    $this->_load_body_footer();	         
+
 	}
 	
 	public function location()
@@ -1290,8 +1302,18 @@ public function carga_body($data=null){
          //load body header
          $this->_load_body_header();
          //load body
-         $this->load->view('include/alta_profes');
+         
+         $this->load->view('include/alta_profe_view',$this->_get_alta_profe_js());
          $this->_load_body_footer();
+    }
+    //Get alta_profe_view js
+     //Función para los js de alta_profe_view
+    public function _get_alta_profe_js(){
+    	$profes_js_files=array();
+    	$jquery_maskedinput = base_url("assets/js/jquery.maskedinput.min.js");
+    	array_push($profes_js_files,$jquery_maskedinput);
+    	$altaProfe_data['altaProfe_data'] = $profes_js_files;
+        return $altaProfe_data;
     }
 }
 }

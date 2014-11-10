@@ -17,6 +17,14 @@ $lang['managment']   = 'Management';
 $lang['users'] = 'Users';
 $lang['groups'] = 'Groups';
 $lang['preferences'] = 'Preferences';
+
+//MAINTENANCES MENU
+$lang['maintenances'] = "Maintenance";
+$lang['organizationalunit_menu'] = "Organizational unit";
+
+//location menu
+$lang['location_menu'] = 'Locations';
+//Alta profes
 $lang['alta_profes'] = 'Create teacher';
 $lang['name'] = 'Name';
 $lang['lastname'] = 'Lastname';
@@ -24,13 +32,9 @@ $lang['tlf'] = 'Phone';
 $lang['address'] = 'Address';
 $lang['identi'] = 'DNI';
 $lang['date'] = 'Date';
-$lang['nace'] = 'birthplace';
+$lang['nace'] = 'Place';
+$lang['place'] = 'Birthplace';
 $lang['village'] = 'Town';
-$lang['cp'] = 'Postal Code';
-$lang['email'] = 'email';
-//MAINTENANCES MENU
-$lang['maintenances'] = "Maintenance";
-$lang['organizationalunit_menu'] = "Organizational unit";
-
-//location menu
-$lang['location_menu'] = 'Locations';
+$lang['cp'] = 'PC';
+$lang['cp_place'] ='Postal Code';
+$lang['email'] = 'Email';
