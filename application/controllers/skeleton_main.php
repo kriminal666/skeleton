@@ -189,6 +189,7 @@ class skeleton_main extends CI_Controller {
         //$choosen = base_url("assets/css/choose.css");
         $datepicker = base_url("assets/css/datepicker.css");
         $bootstrap_timepicker = base_url("assets/css/bootstrap-timepicker.css");
+        $bootstrap_select_min = base_url('assets/skeleton/css/bootstrap-select.min.css');
         $daterangepicker = base_url("assets/css/daterangepicker.css");
         $colorpicker = base_url("assets/css/colorpicker.css");
         $ace_fonts = base_url("assets/css/ace-fonts.css");
@@ -197,7 +198,7 @@ class skeleton_main extends CI_Controller {
         $ace_rtl = base_url("assets/css/ace-rtl.min.css");
         $ace_skins = base_url("assets/css/ace-skins.min.css");
         //CSS select2
-        $select2_css = base_url("assts/css/select2.css");
+        $select2_css = base_url("assets/css/select2.css");
 		//$bootstrap_responsive=base_url("assets/css/bootstrap-responsive.min.css");
 		
 				

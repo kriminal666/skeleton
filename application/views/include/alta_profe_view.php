@@ -63,23 +63,38 @@
                       <input id="form-field-2" class="col-xs-6 col-sm-8" type="text" placeholder="<?php echo lang('identi');?>">
                       
                       </div>
-                        <div class="form-group"><!--Cuarto campo-->
-                         <label class="col-xs-6 col-sm-4" for="form-field-3"> <?php echo lang('nace');?></label>
-                          <input id="form-field-3" class="col-xs-6 col-sm-8" type="text" placeholder="<?php echo lang('place');?>">
-                          </div> 
-                          
-                         <div class="form-group"><!-- Sexto campo Municipio-->
-                         <label class="col-xs-6 col-sm-4" for="e1"> <?php echo lang('village');?></label>
-                         <select id="e1" class="col-xs-6 col-sm-8 select2" type="text">
-                          <option value="T">Tarragona</option>
-                          <option value="Na">Navarra</option>
-                          <option value="Mu">Murcia</option>
-                         </select>
+                        <div class="form-group"><!-- Quinto campo Municipio-->
+                           <label class="col-xs-6 col-sm-4"><?php echo lang('nace');?></label>
+                                <div class="col-xs-6 col-sm-8">
+                          <select id="e3" class="width-100 select2" name="realm">
+                           <option value="" >Navarra</option>
+                           <option value="" >Tarragona</option>
+                           <option value="" >Valencia</option>
+                           </select></span>
                          </div>
-                         <div class="form-group"><!-- Sexto campo CP-->
-                          <label class="col-xs-6 col-sm-4" for="form-field-5"> <?php echo lang('cp');?></label>
-                           <input id="form-field-5" class="col-xs-6 col-sm-8" type="text" placeholder="<?php echo lang('cp_place');?>">
-                           </div>
+                         </div>
+                          
+                         <div class="form-group"><!-- Quinto campo Municipio-->
+                           <label class="col-xs-6 col-sm-4"><?php echo lang('village');?></label>
+                                <div class="col-xs-6 col-sm-8">
+                          <select id="e1" class="width-100 select2" name="realm">
+                           <option value="" >Tortosa</option>
+                           <option value="" >L'ametlla de mar</option>
+                           <option value="" >Vinaroz</option>
+                           </select></span>
+                         </div>
+                         </div>
+                    
+                         <div class="form-group"><!-- Sexto campo Municipio-->
+                           <label class="col-xs-6 col-sm-4"><?php echo lang('cp');?></label>
+                                <div class="col-xs-6 col-sm-8">
+                          <select id="e2" class="width-100 select2" name="realm">
+                           <option value="" >43850</option>
+                           <option value="" >43870</option>
+                           <option value="" >43810</option>
+                           </select></span>
+                         </div>
+                         </div>
 
                               <div class="form-group"><!--Séptimo campo  email-->
                               <label class="col-xs-6 col-sm-4" for="form-field-6"> <?php echo lang('email');?></label>
@@ -197,8 +212,7 @@
                       $('.date-picker').datepicker({autoclose:true}).next().on(ace.click_event, function(){
                          $(this).prev().focus();
                            });
-                    
-                    
-                      $('.input-mask-phone').mask('(999) 999-9999');
+                    $('.input-mask-phone').mask('(999) 999-9999');
+                    $(document).ready(function() { $("#e1,#e2,#e3").select2(); });
                      </script>
                    </div><!--content-->
