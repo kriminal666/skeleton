@@ -69,8 +69,12 @@
                           </div> 
                           
                          <div class="form-group"><!-- Sexto campo Municipio-->
-                         <label class="col-xs-6 col-sm-4" for="form-field-4"> <?php echo lang('village');?></label>
-                         <input id="form-field-4" class="col-xs-6 col-sm-8" type="text" placeholder="<?php echo lang('village');?>">
+                         <label class="col-xs-6 col-sm-4" for="e1"> <?php echo lang('village');?></label>
+                         <select id="e1" class="col-xs-6 col-sm-8 select2" type="text">
+                          <option value="T">Tarragona</option>
+                          <option value="Na">Navarra</option>
+                          <option value="Mu">Murcia</option>
+                         </select>
                          </div>
                          <div class="form-group"><!-- Sexto campo CP-->
                           <label class="col-xs-6 col-sm-4" for="form-field-5"> <?php echo lang('cp');?></label>
@@ -188,7 +192,7 @@
                              <script src="<?php echo $js_file; ?>"></script>
                                   <?php endforeach; ?>
                                <?php endif; ?>
-                       <!--Script for datepicker and phone mask-->
+                       <!--Script for datepicker ,phone mask-->
                      <script type="text/javascript">
                       $('.date-picker').datepicker({autoclose:true}).next().on(ace.click_event, function(){
                          $(this).prev().focus();

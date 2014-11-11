@@ -196,13 +196,14 @@ class skeleton_main extends CI_Controller {
         $ace_min = base_url("assets/css/ace.min.css");
         $ace_rtl = base_url("assets/css/ace-rtl.min.css");
         $ace_skins = base_url("assets/css/ace-skins.min.css");
-
+        //CSS select2
+        $select2_css = base_url("assts/css/select2.css");
 		//$bootstrap_responsive=base_url("assets/css/bootstrap-responsive.min.css");
 		
 				
 		array_push($skeleton_css_files, $bootstrap_min, $font_awesome, $ace_fonts,
 		 $ace_min,$ace_extra_min, $ace_rtl, $ace_skins,$datepicker,$bootstrap_timepicker,$daterangepicker,$jquery_ui,
-		 $colorpicker);
+		 $colorpicker,$select2_css);
 
 		$header_data['skeleton_css_files']=$skeleton_css_files;			
 		
@@ -1311,7 +1312,8 @@ public function carga_body($data=null){
     public function _get_alta_profe_js(){
     	$profes_js_files=array();
     	$jquery_maskedinput = base_url("assets/js/jquery.maskedinput.min.js");
-    	array_push($profes_js_files,$jquery_maskedinput);
+    	$select2 = base_url("assets/js/select2.js");
+    	array_push($profes_js_files,$jquery_maskedinput,$select2);
     	$altaProfe_data['altaProfe_data'] = $profes_js_files;
         return $altaProfe_data;
     }
