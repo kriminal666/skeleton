@@ -37,4 +37,4 @@ $lang['date'] = 'Fecha';
 $lang['place'] = 'Nacimiento';
 $lang['village'] = 'Municipio';
 $lang['cp'] = 'CP';
-$lang['cp_place'] = 'Código Postal'
+$lang['cp_place'] = 'Código Postal';
