@@ -38,3 +38,13 @@ $lang['village'] = 'Town';
 $lang['cp'] = 'PC';
 $lang['cp_place'] ='Postal Code';
 $lang['email'] = 'Email';
+$lang['radio'] = 'Situation';
+$lang['radio1'] = 'Functionary';
+$lang['radio2'] = ' Probationer';
+$lang['radio3'] = 'Interim';
+
+$lang['titul'] = 'Degree';
+$lang['catlevel'] = 'Catalan level';
+$lang['datealta'] = 'Discharge date';
+$lang['special'] = 'Specialty';
+$lang['observ'] = 'Observations';

@@ -132,8 +132,8 @@
                   
                                     </div>
                                     
-                          <div class="form-group col-md-6"><!--checkbox 1-->
-                            <div class="col-md-3">
+                          <div class="form-group"><!--checkbox 1-->
+                            <!--<div class="col-md-3">-->
                             <label class="control-label   bolder blue"><?php echo lang('dpt');?></label>
                                  
                                   <div class="checkbox">
@@ -158,49 +158,105 @@
 
                              </div>
                            </div>
+                                     
                           <!--Radio button-->
-                            <div class="col-md-6">
-                        <label class="control-label bolder blue">Radio</label>
+
+                            <div class="form-group col-md-3 no-padding-right">
+                        <label class="control-label bolder blue"><?php echo lang('radio');?></label>
 
                         <div class="radio">
                           <label>
                             <input type="radio" class="ace" name="form-field-radio">
-                            <span class="lbl"> radio option 1</span>
+                            <span class="lbl"><?php echo lang('radio1');?></span>
                           </label>
                         </div>
 
                         <div class="radio">
                           <label>
                             <input type="radio" class="ace" name="form-field-radio">
-                            <span class="lbl"> radio option 2</span>
+                            <span class="lbl"> <?php echo lang('radio2');?></span>
                           </label>
                         </div>
 
                         <div class="radio">
                           <label>
                             <input type="radio" class="ace" name="form-field-radio">
-                            <span class="lbl"> radio option 3</span>
+                            <span class="lbl"> <?php echo lang('radio3');?></span>
                           </label>
                         </div>
 
                         <div class="radio">
                           <label>
-                            <input type="radio" class="ace" name="form-field-radio" disabled="">
-                            <span class="lbl"> disabled</span>
+                            <input type="radio" class="ace" name="form-field-radio">
+                            <span class="lbl"><?php echo lang('radio4');?></span>
                           </label>
                         </div>
                       
-                    </div><!--Cierra radio button-->
+                    </div><!--Cierra radio button--><!--Cierra col 3-->
 
-                          </div><!--Cierra col 3-->
+                          </div><!--Cierra row-->
+
 
                  </div><!--Primera fila-->
-                 <div class="row">
-                  <div class="col-md-3">
-                    
+                 <div class="row"><!--SEGUNDA FILA-->
+                  <div class="col-md-3"><!--PRIMERA COLUMNA-->
+                   <div class="form-group"><!--Primer campo-->
+                   <label class="col-xs-6 col-sm-4" for="form-field-10"> <?php echo lang('titul');?></label>
+                  <input id="form-field-10" class="col-xs-6 col-sm-8" type="text" placeholder="<?php echo lang('titul');?>">
+                   </div>
+                 </div><!--columna-->
+               </div><!--fila2-->
+               <div class="space-4"></div>
+               <div class="row">
+                <div class="col-md-3">
+                   <div class="form-group"><!--Segundo campo-->
+                   <label class="col-xs-6 col-sm-4" for="form-field-11"> <?php echo lang('catlevel');?></label>
+                  <input id="form-field-11" class="col-xs-6 col-sm-8" type="text" placeholder="<?php echo lang('catlevel');?>">
+                   </div>
                   </div>
+               
                      </div><!--row-->
-                     </form>
+                     <div class="space-4"></div>
+                     <div class="row">
+                      <div class="col-md-3">
+                      <div class="form-group"><!--Campo date-->
+                              <label class="col-xs-6 col-sm-4" for="datepicker">
+                                <?php echo lang('datealta');?>
+                               <!-- <small class="text-success">&nbsp;</small>-->
+                              </label>
+                              
+                             <div class="input-group col-xs-6 col-sm-8 input-group-sm">
+                              <span class="input-group-addon">
+                             <i class="icon-calendar"></i>
+                             </span>
+                             <input type="text" class="form-control  date-picker" id="id-date-picker-2">
+                          
+                           </div>
+                            </div>
+                          </div><!--col-->
+                        </div><!--row-->
+                        <div class="space-4"></div>
+                        <div class="row">
+                          <div class="col-md-3">
+                             <div class="form-group">
+                   <label class="col-xs-6 col-sm-4" for="form-field-12"> <?php echo lang('special');?></label>
+                  <input id="form-field-12" class="col-xs-6 col-sm-8" type="text" placeholder="<?php echo lang('special');?>">
+                </div>
+                   </div><!--col-->
+                  <div class="col-md-3">
+                    <div class="form-group">
+                    <label class="col-xs-6 col-sm-4" for="text1"> <?php echo lang('observ');?></label>
+                    <textarea id="text1" class="form-control col-xs-6 col-sm-8" rows="3"></textarea>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <button type="button" class="width-35 center btn btn-sm btn-info">
+                             <i class="icon-ok bigger-110"></i>
+                              Guardar
+                            </button>
+                          </div>
+                 </div><!--row-->
+              </form>
                     <!--Load views js-->
                      <?php if (isset($altaProfe_data)): ?>
                        <?php foreach($altaProfe_data as $js_file): ?>
@@ -215,4 +271,99 @@
                     $('.input-mask-phone').mask('(999) 999-9999');
                     $(document).ready(function() { $("#e1,#e2,#e3").select2(); });
                      </script>
-                   </div><!--content-->
+                     <!--Script imagen-->
+                     <script type="text/javascript">
+                  // *** editable avatar *** //
+        try {//ie8 throws some harmless exception, so let's catch it
+      
+          //it seems that editable plugin calls appendChild, and as Image doesn't have it, it causes errors on IE at unpredicted points
+          //so let's have a fake appendChild for it!
+          if( /msie\s*(8|7|6)/.test(navigator.userAgent.toLowerCase()) ) Image.prototype.appendChild = function(el){}
+      
+          var last_gritter
+          $('#avatar').editable({
+            type: 'image',
+            name: 'avatar',
+            value: null,
+            image: {
+              //specify ace file input plugin's options here
+              btn_choose: 'Change Avatar',
+              droppable: true,
+              /**
+              //this will override the default before_change that only accepts image files
+              before_change: function(files, dropped) {
+                return true;
+              },
+              */
+      
+              //and a few extra ones here
+              name: 'avatar',//put the field name here as well, will be used inside the custom plugin
+              max_size: 110000,//~100Kb
+              on_error : function(code) {//on_error function will be called when the selected file has a problem
+                if(last_gritter) $.gritter.remove(last_gritter);
+                if(code == 1) {//file format error
+                  last_gritter = $.gritter.add({
+                    title: 'File is not an image!',
+                    text: 'Please choose a jpg|gif|png image!',
+                    class_name: 'gritter-error gritter-center'
+                  });
+                } else if(code == 2) {//file size rror
+                  last_gritter = $.gritter.add({
+                    title: 'File too big!',
+                    text: 'Image size should not exceed 100Kb!',
+                    class_name: 'gritter-error gritter-center'
+                  });
+                }
+                else {//other error
+                }
+              },
+              on_success : function() {
+                $.gritter.removeAll();
+              }
+            },
+              url: function(params) {
+              // ***UPDATE AVATAR HERE*** //
+              //You can replace the contents of this function with examples/profile-avatar-update.js for actual upload
+      
+      
+              var deferred = new $.Deferred
+      
+              //if value is empty, means no valid files were selected
+              //but it may still be submitted by the plugin, because "" (empty string) is different from previous non-empty value whatever it was
+              //so we return just here to prevent problems
+              var value = $('#avatar').next().find('input[type=hidden]:eq(0)').val();
+              if(!value || value.length == 0) {
+                deferred.resolve();
+                return deferred.promise();
+              }
+      
+      
+              //dummy upload
+              setTimeout(function(){
+                if("FileReader" in window) {
+                  //for browsers that have a thumbnail of selected image
+                  var thumb = $('#avatar').next().find('img').data('thumb');
+                  if(thumb) $('#avatar').get(0).src = thumb;
+                }
+                
+                deferred.resolve({'status':'OK'});
+      
+                if(last_gritter) $.gritter.remove(last_gritter);
+                last_gritter = $.gritter.add({
+                  title: 'Avatar Updated!',
+                  text: 'Uploading to server can be easily implemented. A working example is included with the template.',
+                  class_name: 'gritter-info gritter-center'
+                });
+                
+               } , parseInt(Math.random() * 800 + 800))
+      
+              return deferred.promise();
+            },
+            
+            success: function(response, newValue) {
+            }
+          })
+        }catch(e) {}
+      </script>
+                   </div>
+                 </body><!--content-->
