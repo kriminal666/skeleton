@@ -248,10 +248,29 @@ class skeleton_main extends CI_Controller {
 		return $header_data;
 	}
 	public function location2(){
-		$this->current_table="users";
+		//Definimos la tabla
+		$this->current_table="location";
 		$this->grocery_crud->set_table($this->current_table);
+		//Definimos los 7 campos obligatorios
+		$this->grocery_crud->required_fields('name','entryDate','last_update','creationUserId','lastupdateUserId','markedForDeletion','markedForDeletionDate');
+		//Función que muestra solo los campos que especificamos(los 7 obligatorios)
+		$this->grocery_crud->express_fields('name','entryDate','last_update','creationUserId','lastupdateUserId','markedForDeletion','markedForDeletionDate');
+		//Función para mostrar los nombres de tablas correctamente
+		$this->set_common_columns_name();
+		//Función para mostrar el nombre que decidamos de los campos
+		$this->grocery_crud->display_as('name','Nombre');
+		$this->grocery_crud->display_as('entryDate','Fecha de entrada');
+		$this->grocery_crud->display_as('last_update','Última modificación');
+		$this->grocery_crud->display_as('creationUserId','Usuario creador');
+		$this->grocery_crud->display_as('lastupdateUserId','Último modificador ID');
+		$this->grocery_crud->display_as('markedForDeletion','Borrado');
+		$this->grocery_crud->display_as('markedForDeletionDate','Fecha de marca borrado');
+		//Relaciones entre los campos.
+		$this->grocery_crud->set_relation('parentLocation','location','{name}',array('markedForDeletion' => 'n'));
+		$this->grocery_crud->set_relation_n_n('groups', 'users_groups','groups', 'user_id', 'group_id', 'name');
+		//renderizar todo lo anterior
 		$output = $this->grocery_crud->render();
-
+		//cargamos la vista
         $this->_load_html_header($this->_get_html_header_data(),$output); 
 	    $this->_load_body_header();
 			
