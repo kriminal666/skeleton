@@ -37,7 +37,7 @@
     <!-- basic scripts -->
 
     <!-- inline scripts related to this page -->
-
+</div><!--mainContent-->
 </body>
 </html>
 

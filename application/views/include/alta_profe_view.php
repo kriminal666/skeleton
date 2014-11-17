@@ -32,12 +32,15 @@
                 </small>
               </h1>
             </div><!--FIN BARRAS SUPERIORES-->
+          </div>
+
             <div class="content">
               <form class="form-horizontal" role="form">
               <div class="row">
                 <div class="col-md-3">
                   <div class="ace-file-input ace-file-multiple">
-                   <input type="file"><label data-title="Change avatar" class="file-label">
+                   <input type="file">
+                   <label data-title="Change avatar" class="file-label">
                      <span data-title="No File ..." class="file-name">
                       <i class="icon-picture"></i>
                        </span>
@@ -365,5 +368,6 @@
           })
         }catch(e) {}
       </script>
-                   </div>
-                 </body><!--content-->
+                   </div><!--content-->
+
+                 

@@ -96,7 +96,7 @@ class skeleton_main extends CI_Controller {
 		$data['header_authors'] = $header_authors ;
 		$data['skeleton_css_files'] = $skeleton_css_files ;
 		$data['skeleton_js_files'] = $skeleton_js_files ;
-		$data['menu'] = $menu;
+		$data['menu'] = $menu;			//Mezcla de arrays, si el segundo tiene algo que tiene el primero, se sobreescribe.
 		$this->load->view($this->html_header_view,array_merge((array) $grocery_crud_data,$data));
 	}
 	
@@ -265,6 +265,12 @@ class skeleton_main extends CI_Controller {
 		$this->grocery_crud->display_as('lastupdateUserId','Último modificador ID');
 		$this->grocery_crud->display_as('markedForDeletion','Borrado');
 		$this->grocery_crud->display_as('markedForDeletionDate','Fecha de marca borrado');
+		//Valores por defectode algunos campos
+		$this->grocery_crud->set_relation('creationUserId','users','{username}',array('active' => '1'));
+		$this->grocery_crud->set_default_value($this->current_table,'creationUserId',$this->session->userdata('user_id'));
+		$this->grocery_crud->set_default_value($this->current_table,'lastupdateUserId',$this->session->userdata('user_id'));
+		$date = date("d-m-Y H:i:s");
+		$this->grocery_crud->set_default_value($this->current_table,'entryDate',$date);
 		//Relaciones entre los campos.
 		$this->grocery_crud->set_relation('parentLocation','location','{name}',array('markedForDeletion' => 'n'));
 		$this->grocery_crud->set_relation_n_n('groups', 'users_groups','groups', 'user_id', 'group_id', 'name');
@@ -1333,7 +1339,9 @@ public function carga_body($data=null){
     	$profes_js_files=array();
     	$jquery_maskedinput = base_url("assets/js/jquery.maskedinput.min.js");
     	$select2 = base_url("assets/js/select2.js");
-    	array_push($profes_js_files,$jquery_maskedinput,$select2);
+    	$bootstrap_editable = base_url("assets/js/x-editable/bootstrap-editable.min.js");
+    	$ace_editable = base_url("assets/js/x-editable/ace-editable.min.js");
+    	array_push($profes_js_files,$jquery_maskedinput,$select2,$bootstrap_editable,$ace_editable);
     	$altaProfe_data['altaProfe_data'] = $profes_js_files;
         return $altaProfe_data;
     }
