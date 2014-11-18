@@ -141,14 +141,14 @@
                                  
                                   <div class="checkbox">
                                     <label>
-                                    <input type="checkbox" class="ace" name="form-field-checkbox">
+                                    <input type="checkbox" class="ace ace-checkbox-2" name="form-field-checkbox">
                                           <span class="lbl"> <?php echo lang('dpt_1');?></span>
                                           </label>
                                           </div>
 
                                   <div class="checkbox">
                                    <label>
-                                     <input type="checkbox" class="ace" name="form-field-checkbox">
+                                     <input type="checkbox" class="ace ace-checkbox-2" name="form-field-checkbox">
                                         <span class="lbl"><?php echo lang('dpt_2');?></span>
                                              </label>
                                              </div>
