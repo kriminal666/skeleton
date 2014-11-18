@@ -48,7 +48,13 @@
       <?php endif; ?>
       
       <!-- END GROCERY CRUD JS -->
+      <!--Load  specific views js-->
+        <?php if (isset($specific_js)): ?>
+          <?php foreach($specific_js as $js_file): ?>
+           <script src="<?php echo $js_file; ?>"></script>
+              <?php endforeach; ?>
+               <?php endif; ?>
      
-     
+     <!--END specific js -->
  </head>
  <!-- END html_header.php -->

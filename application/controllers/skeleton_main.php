@@ -88,7 +88,7 @@ class skeleton_main extends CI_Controller {
 		
 		$skeleton_css_files = array_key_exists("skeleton_css_files",$html_header_data) ? $html_header_data['skeleton_css_files'] : array();
 		$skeleton_js_files = array_key_exists("skeleton_js_files",$html_header_data) ? $html_header_data['skeleton_js_files'] : array();
-		
+		$specific_js = array_key_exists("specific_js",$html_header_data) ? $html_header_data['specific_js'] : array();
 		$menu = array_key_exists("menu",$html_header_data) ? $html_header_data['menu'] : array();
 
 		$data['header_title'] = $header_title ;
@@ -96,6 +96,7 @@ class skeleton_main extends CI_Controller {
 		$data['header_authors'] = $header_authors ;
 		$data['skeleton_css_files'] = $skeleton_css_files ;
 		$data['skeleton_js_files'] = $skeleton_js_files ;
+		$data['specific_js'] = $specific_js;
 		$data['menu'] = $menu;			//Mezcla de arrays, si el segundo tiene algo que tiene el primero, se sobreescribe.
 		$this->load->view($this->html_header_view,array_merge((array) $grocery_crud_data,$data));
 	}
@@ -179,7 +180,7 @@ class skeleton_main extends CI_Controller {
 		$this->_load_body_footer();		
 	}
 	
-	protected function _get_html_header_data() {
+	protected function _get_html_header_data($specific_js=array()) {
 
 		$skeleton_css_files=array();
 		//Nuevos CSS de la plantilla ACE V3
@@ -243,7 +244,9 @@ class skeleton_main extends CI_Controller {
 
 		array_push($skeleton_js_files,$jquery_js,$ace_extra_js,$bootstrap_min_js,$typeahead,$jquery_full_min,$jquery_touch,$ace_elements,$ace_min,$lodash_js, $lazyload_js);
 		
-		$header_data['skeleton_js_files']=$skeleton_js_files;	
+		$header_data['skeleton_js_files']=$skeleton_js_files;
+		//specific js load.
+		$header_data['specific_js'] = $specific_js;	
 		
 		return $header_data;
 	}
@@ -1324,13 +1327,15 @@ public function carga_body($data=null){
          $this->_load_body_footer();
     }
     public function alta_profe(){
+    	$data = array();
+    	$data=$this->_get_alta_profe_js();
     	//load html header
-    	 $this->_load_html_header($this->_get_html_header_data());
+    	 $this->_load_html_header($this->_get_html_header_data($data));
          //load body header
          $this->_load_body_header();
          //load body
          
-         $this->load->view('include/alta_profe_view',$this->_get_alta_profe_js());
+         $this->load->view('include/alta_profe_view');
          $this->_load_body_footer();
     }
     //Get alta_profe_view js
@@ -1342,8 +1347,8 @@ public function carga_body($data=null){
     	$bootstrap_editable = base_url("assets/js/x-editable/bootstrap-editable.min.js");
     	$ace_editable = base_url("assets/js/x-editable/ace-editable.min.js");
     	array_push($profes_js_files,$jquery_maskedinput,$select2,$bootstrap_editable,$ace_editable);
-    	$altaProfe_data['altaProfe_data'] = $profes_js_files;
-        return $altaProfe_data;
+    	
+        return $profes_js_files;
     }
 }
 }

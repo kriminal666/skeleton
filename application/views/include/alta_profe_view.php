@@ -260,12 +260,7 @@
                           </div>
                  </div><!--row-->
               </form>
-                    <!--Load views js-->
-                     <?php if (isset($altaProfe_data)): ?>
-                       <?php foreach($altaProfe_data as $js_file): ?>
-                             <script src="<?php echo $js_file; ?>"></script>
-                                  <?php endforeach; ?>
-                               <?php endif; ?>
+                    
                        <!--Script for datepicker ,phone mask-->
                      <script type="text/javascript">
                       $('.date-picker').datepicker({autoclose:true}).next().on(ace.click_event, function(){
