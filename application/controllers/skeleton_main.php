@@ -87,8 +87,10 @@ class skeleton_main extends CI_Controller {
 		$header_authors = array_key_exists("header_authors",$html_header_data) ? $html_header_data['header_authors'] : $this->config->item('header_authors', 'skeleton_auth');
 		
 		$skeleton_css_files = array_key_exists("skeleton_css_files",$html_header_data) ? $html_header_data['skeleton_css_files'] : array();
+		//specific js and css files
 		$skeleton_js_files = array_key_exists("skeleton_js_files",$html_header_data) ? $html_header_data['skeleton_js_files'] : array();
 		$specific_js = array_key_exists("specific_js",$html_header_data) ? $html_header_data['specific_js'] : array();
+		$specific_css = array_key_exists("specific_css",$html_header_data) ? $html_header_data['specific_css'] : array();      
 		$menu = array_key_exists("menu",$html_header_data) ? $html_header_data['menu'] : array();
 
 		$data['header_title'] = $header_title ;
@@ -96,7 +98,9 @@ class skeleton_main extends CI_Controller {
 		$data['header_authors'] = $header_authors ;
 		$data['skeleton_css_files'] = $skeleton_css_files ;
 		$data['skeleton_js_files'] = $skeleton_js_files ;
+		//Specific js and css files for views
 		$data['specific_js'] = $specific_js;
+		$data['specific_css'] = $specific_css;
 		$data['menu'] = $menu;			//Mezcla de arrays, si el segundo tiene algo que tiene el primero, se sobreescribe.
 		$this->load->view($this->html_header_view,array_merge((array) $grocery_crud_data,$data));
 	}
@@ -180,7 +184,7 @@ class skeleton_main extends CI_Controller {
 		$this->_load_body_footer();		
 	}
 	
-	protected function _get_html_header_data($specific_js=array()) {
+	protected function _get_html_header_data($specific_js=array(),$specific_css=array()) {
 
 		$skeleton_css_files=array();
 		//Nuevos CSS de la plantilla ACE V3
@@ -208,7 +212,8 @@ class skeleton_main extends CI_Controller {
 		 $colorpicker,$select2_css);
 
 		$header_data['skeleton_css_files']=$skeleton_css_files;			
-		
+		//specific css files
+		$header_data['specific_css'] = $specific_css;
 		$skeleton_js_files=array();
 
 		$lodash_js="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/1.2.1/lodash.min.js";
@@ -1349,6 +1354,25 @@ public function carga_body($data=null){
     	array_push($profes_js_files,$jquery_maskedinput,$select2,$bootstrap_editable,$ace_editable);
     	
         return $profes_js_files;
+    }
+    public function datatables(){
+    	$datatables_js = array();
+    	$datatables_css = array();
+    	//Specific js for this view
+    	$jquery_datatable_js = base_url('assets/datatable/media/js/jquery.dataTables.min.js');
+    	array_push($datatables_js,$jquery_datatable_js);
+    	//Specific css for this view
+    	$jquery_datatable_css = base_url('assets/datatable/media/css/jquery.dataTables.min.css');
+    	array_push($datatables_css,$jquery_datatable_css);
+    	//Load HTML header
+    	$this->_load_html_header($this->_get_html_header_data($datatables_js,$datatables_css));
+    	//Load body header
+    	$this->_load_body_header();
+    	//Load view
+    	$this->load->view('datatables_view');
+    	//Load footer
+    	$this->_load_body_footer();
+
     }
 }
 }

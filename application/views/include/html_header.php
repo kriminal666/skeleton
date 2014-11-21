@@ -16,6 +16,13 @@
 	  <?php endif; ?>
       
       <!-- END CSS --> 
+      <!--SPECIFIC CSS FILES-->
+       <?php if (isset($specific_css)): ?>
+    <?php foreach((array) $specific_css as $specific_css_file): ?>
+      <link type="text/css" rel="stylesheet" href="<?php echo $specific_css_file; ?>" />
+    <?php endforeach; ?>
+    <?php endif; ?>
+    <!-- END SPECIFIC CSS FILES-->
       
    
             <!-- BEGIN JS --> 

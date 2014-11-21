@@ -380,6 +380,12 @@
                     Prueba GroceryCRUD
                   </a>
                 </li>
+                <li>
+                  <a href="<?=base_url('/index.php/skeleton_main/datatables')?>">
+                    <i class="icon-double-angle-right"></i>
+                    Prueba DataTables
+                  </a>
+                </li>
                </ul>
             </li>
 
